@@ -22,6 +22,8 @@ import puppeteer from "puppeteer";
 
 const PORT = process.env.PORT || 4000;
 const CLAUDE_MODEL = "claude-sonnet-4-6";
+const BRAND_ORANGE = "#F97316";
+const BRAND_ORANGE_LIGHT = "#FFF7ED";
 
 const app = express();
 app.use(cors());
@@ -367,8 +369,8 @@ function buildExportHtml({ markdown, mlData, chartImages, target_column, problem
   @page { size: A4; margin: 18mm 16mm; }
   * { box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: #2A2A2A; font-size: 12px; line-height: 1.55; }
-  h1 { font-size: 22px; border-bottom: 2px solid #ED8B00; padding-bottom: 6px; margin: 0 0 14px; }
-  h2 { font-size: 17px; border-bottom: 1px solid #ED8B00; padding-bottom: 4px; margin: 22px 0 10px; }
+  h1 { font-size: 22px; border-bottom: 2px solid ${BRAND_ORANGE}; padding-bottom: 6px; margin: 0 0 14px; }
+  h2 { font-size: 17px; border-bottom: 1px solid ${BRAND_ORANGE}; padding-bottom: 4px; margin: 22px 0 10px; }
   h2.page-break { page-break-before: always; break-before: page; margin-top: 0; }
   h3 { font-size: 14px; margin: 14px 0 6px; }
   p { margin: 0 0 10px; }
@@ -376,16 +378,16 @@ function buildExportHtml({ markdown, mlData, chartImages, target_column, problem
   strong { color: #1F1F1F; }
   /* Inline code references (column / identifier names from Claude) — plain
      orange text, no background box, no monospace, never breaks the line. */
-  code { color: #ED8B00; font-weight: 500; font-family: inherit; background: transparent; padding: 0; border-radius: 0; font-size: inherit; display: inline; }
+  code { color: ${BRAND_ORANGE}; font-weight: 500; font-family: inherit; background: transparent; padding: 0; border-radius: 0; font-size: inherit; display: inline; }
   pre  { display: inline; margin: 0; padding: 0; background: transparent; font-family: inherit; }
   figure.chart-figure { margin: 12px 0; text-align: center; page-break-inside: avoid; }
   figure.chart-figure img { max-width: 100%; height: auto; border: 1px solid #E5E5E5; border-radius: 6px; }
   .doc-title { font-size: 24px; font-weight: 700; margin: 0 0 4px; color: #1F1F1F; }
   .doc-subtitle { font-size: 13px; color: #666; margin: 0 0 18px; }
   table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; font-size: 11px; page-break-inside: avoid; }
-  th { background: #FFF3E0; text-align: left; padding: 6px 8px; border-bottom: 1px solid #E5E5E5; font-weight: 600; }
+  th { background: ${BRAND_ORANGE_LIGHT}; text-align: left; padding: 6px 8px; border-bottom: 1px solid #E5E5E5; font-weight: 600; }
   td { padding: 6px 8px; border-bottom: 1px solid #F0F0F0; vertical-align: top; }
-  tfoot td { border-top: 2px solid #ED8B00; font-weight: 600; background: #FFF6E8; }
+  tfoot td { border-top: 2px solid ${BRAND_ORANGE}; font-weight: 600; background: ${BRAND_ORANGE_LIGHT}; }
 </style></head>
 <body>
 <div class="doc-header">
