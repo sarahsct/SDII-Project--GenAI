@@ -32,9 +32,9 @@ import {
   PolarGrid, PolarAngleAxis, PolarRadiusAxis, ComposedChart,
 } from "recharts";
 
-const COLOR_PRIMARY = "#ED8B00";
-const COLOR_DARK = "#CF7B00";
-const COLOR_LIGHT = "#FFF3E0";
+const COLOR_PRIMARY = "#F97316";
+const COLOR_DARK = "#EA580C";
+const COLOR_LIGHT = "#FFF7ED";
 const COLOR_RISK = "#D14343";
 const COLOR_PROTECT = "#3F8F4D";
 // Unified orange-family palette — used for EVERY chart regardless of what
@@ -42,12 +42,12 @@ const COLOR_PROTECT = "#3F8F4D";
 // multi-series charts cycle through shades of orange so series stay
 // distinguishable without breaking the single-colour brand look.
 const ORANGE_PALETTE = [
-  "#ED8B00", // primary
-  "#B86600", // darker
-  "#FFB547", // lighter
-  "#CF7B00", // dark
-  "#FFD59E", // pale
-  "#8A4B00", // deep
+  "#F97316", // primary
+  "#EA580C", // darker
+  "#FB923C", // lighter
+  "#C2410C", // dark
+  "#FDBA74", // pale
+  "#9A3412", // deep
 ];
 
 const tooltipStyle = {
